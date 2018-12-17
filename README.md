@@ -18,13 +18,13 @@ Therefore, each piece has one and only one matching piece which results in all 3
 
 If we keep thinking in binary, in order for a pair of pieces to be each others matching counterparts, the following has to be true:
 
-**A xor reversed(B) == 0**
+**A xor reversed(B) == 7**
 
 or in other words, in order to solve the puzzle, piece #0 must be placed against piece #7, #4 against #6, #1 against #3 and #2 against #5.
 
 ![Solution](solution.jpg)
 
-### Total combinations
+### Combinatorics
 
 Total amount of permutations of 8 unique pieces is 8! = 40,320
 
@@ -47,9 +47,9 @@ And, again, divide by 2 and 4 to avoid double counting of the same combination w
 
 **Total number of solutions: 4! x 2^4 x 2 / 2 / 4 = 96**
 
-**Observation #1**: It is possible to screw up the assembly of the puzzle and insert magnets in a way that will result in pieces with identical encodings (not 8 unique ones). The number of possible solved combinations will increase, the total number of combinations will decrease.
+**Observation #1**: It is possible to screw up the assembly of the puzzle and insert magnets in a way that will result in pieces with identical encodings (not 8 unique ones). The number of possible solutions will increase, the total number of unique combinations will decrease. Ouch!
 
-**Observation #2**: In a properly assembled puzzle that actually has 8 uniquely encided pieces, it is IMPOSSIBLE to get to a state where all the 12 pairs are pushed towards the outer edges. Piece #0 (000) will only push all 3  magnets when paired with another #0, and in a properly assembled puzzle there should be only one of each.
+**Observation #2**: In a properly assembled puzzle that actually has 8 uniquely encoded pieces, it is IMPOSSIBLE to get to a state where all the 12 pairs are pushed towards the outer edges. Piece #0 (000) will only push all 3 magnets when paired with another #0, and in a properly assembled puzzle there should be only one of each.
 
 ## Practice
 
