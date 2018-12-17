@@ -97,7 +97,7 @@ a) Avoid encodings #0, #6, #9 and #15 (#0 will only fully push away another #0, 
 
 b) Avoid encodings #5, #3, #10, #12 (#5 will only fully pull another #5, etc)
 
-That leaves with 8 encodings that do not have any of the issues above, each one of them has a proper counterpart for pulling it and another one of pushing it. These encodings are: #1, #2, #4, #7, #8, #11, #13 and #14. And the actual matching pairs for both solutions are as follows:
+That leaves with 8 encodings that do not have any of the issues above, each one of them has a proper counterpart for pulling all 4 of its magnets and and another one of pushing all 4. These encodings are: #1, #2, #4, #7, #8, #11, #13 and #14. And the actual matching pairs for both solutions are as follows:
  
 **All magnets pulled inside:** (#1, #7), (#8, #14), (#2, #11), (#4, #13)
 
