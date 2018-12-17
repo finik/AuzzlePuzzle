@@ -54,7 +54,7 @@ And, again, divide by 8 to account for rotation of the whole construction and av
 
 **Observation #1**: It is possible to screw up the assembly of the puzzle and insert magnets in a way that will result in pieces with identical encodings existing within the same puzzle. The number of possible solved combinations will increase, the total number of combinations will decrease. Ouch!
 
-**Observation #2**: In a proper puzzle that actually has 8 uniquely encoded pieces, it is IMPOSSIBLE to get to a state where all the 12 pairs are pushed towards the outer edges. Piece #0 (000) will only push all 3 magnets when paired with another #0, and since there should be only one #0 piece in the puzzle that should never happen.
+**Observation #2**: In a proper puzzle that actually has 8 uniquely encoded pieces, it is IMPOSSIBLE to get to a state where all the 12 pairs are pushed towards the outer edges. Piece #0 (000) will only push all 3 magnets when paired with another #0, and since there should be only one #0 piece in the puzzle that should never happen. This is true for any encoding that is a 'palyndrome' in a 3bit range (i.e #0, #2, #5, #7) (see [4bit](#4bit) variation for a way to possibly do it with 4 bits)
 
 ## Practice
 
@@ -86,4 +86,20 @@ Given the total number of combinations and the total number of solutions, it is 
 If we mark the matching pieces with 4 different colors like in the picture above, the puzzle is trivial to solve systematically. In fact, we can think of it as a subset of a 2x2x2 cube where one axis rotates only by 180 and another axis doesn't rotate at all. 
 
 However, individual pieces are not marked and the only thing that can be observed externally by looking at the magnets is the result of the interaction between two adjustent pieces (representing **A xor reversed(B)**). This  makes it much more challenging. I would love to get get my hands on one to see if there is a way to properly formulate an algorithm for a solution.
+
+## Variations
+
+### 4bit
+
+In this variant, we have more possible encodings (16) than needed to represent 8 unique pieces, however that allows us to skip encodings that require duplicated pieces:
+
+a) Avoid encodings #0, #6, #9 and #15 (#0 will only fully push away another #0, etc)
+
+b) Avoid encodings #5, #3, #10, #12 (#5 will only fully pull another #5, etc)
+
+That leaves with 8 encodings that do not have any of the issues above, each one of them has a proper counterpart for pulling it and another one of pushing it. These encodings are: #1, #2, #4, #7, #8, #11, #13 and #14. And the actual matching pairs for both solutions are as follows:
+ 
+**All magnets pulled inside:** (#1, #7), (#8, #14), (#2, #11), (#4, #13)
+
+**All magnets pushed outside:** (#1, #8), (#2, #4), (#7, #14), (#11, #13)
 
