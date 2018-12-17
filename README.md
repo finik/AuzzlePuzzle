@@ -24,10 +24,6 @@ or in other words, in order to solve the puzzle, piece #0 must be placed against
 
 ![Solution](solution.jpg)
 
-**Observation #1**: It is possible to screw up during the assembly of the puzzle and insert magnets in a way that will result in pieces with identical encoding (not 8 unique ones). The number of possible solved combinations will increase, the total number of combinations will decrease.
-
-**Observation #2**: In a properly assembled puzzle that actually has 8 uniquely encided pieces, it is IMPOSSIBLE to get to a state where all the 12 pairs are pushed towards the outer edges. Piece #0 (000) will only push all 3  magnets when paired with another #0, and in a properly assembled puzzle there should be only one of each.
-
 ### Total combinations
 
 Total amount of permutations of 8 unique pieces is 8! = 40,320
@@ -36,7 +32,7 @@ We also need to multiply it by 2 to account for two possible states of the outer
 
 However if we take any state of the puzzle, whether we flip it by 180 degrees along X or rotate it in any of the 4 orentations along axis Y, it is still the same combination, so we must divide by 2 and 4 respectively.
 
-**Total number of combinations: 8!*2/2/4 = 10,080**
+**Total number of combinations: 8! x 2 / 2 / 4 = 10,080**
 
 What about possible solutions?
 The picture above shows only one possible solution of the puzzle. However it immediately becomes clear that the puzzle has many possible solutions: within each pair, the two pieces can swap places. Also, the position of the pairs relative to one another can change and the puzzle would still look solved. 
@@ -49,7 +45,11 @@ Similarly to total combinations, we multiple by 2 to account for 2 states of the
 
 And, again, divide by 2 and 4 to avoid double counting of the same combination when we rotate the whole thing together across possible axis.
 
-**Total number of solutions: 4!*2^4*2/2/4 = 96**
+**Total number of solutions: 4! x 2^4 x 2 / 2 / 4 = 96**
+
+**Observation #1**: It is possible to screw up the assembly of the puzzle and insert magnets in a way that will result in pieces with identical encodings (not 8 unique ones). The number of possible solved combinations will increase, the total number of combinations will decrease.
+
+**Observation #2**: In a properly assembled puzzle that actually has 8 uniquely encided pieces, it is IMPOSSIBLE to get to a state where all the 12 pairs are pushed towards the outer edges. Piece #0 (000) will only push all 3  magnets when paired with another #0, and in a properly assembled puzzle there should be only one of each.
 
 ## Practice
 
