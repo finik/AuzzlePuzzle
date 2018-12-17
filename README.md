@@ -12,7 +12,7 @@ At a first glance the puzzle looks overwhelming. It has 24 magnets, arranged in 
 
 After further inspection, however, it becomes clear, that the things are not as bad as they seem. There are actually 8 unique solid pieces, each piece containing 3 magnets. These are the actual pieces that needs to be matched to each other, and the horizontal rotation of the inner pieces is performed by increments of 90 degrees each time. The placement of the magnets within each piece is unique, we can actually represent it as a binary bit, 1 if the magnets '+' is pointing towards the center, and 0 if it points towards the outer edge. And 3 bits is the exact number required to encode 8 unique pieces: 0=000, 1=001, 2=010, 3=011, 4=100, 5=101, 6=110, 7=111.
 
-Therefore, each piece has only one and only one matching piece which will result in all 3 pairs of magents pulling towards the middle.
+Therefore, each piece has one and only one matching piece which results in all 3 pairs of magents pulling towards the middle.
 
 ![Magnets](magnets.jpg)
 
@@ -35,7 +35,7 @@ However if we take any state of the puzzle, whether we flip it by 180 degrees al
 **Total number of combinations: 8! x 2 / 2 / 4 = 10,080**
 
 What about possible solutions?
-The picture above shows only one possible solution of the puzzle. However it immediately becomes clear that the puzzle has many possible solutions: within each pair, the two pieces can swap places. Also, the position of the pairs relative to one another can change and the puzzle would still look solved. 
+The picture above shows only one possible solution of the puzzle. However, it immediately becomes clear that the puzzle has many possible solutions: within each pair, the two pieces can swap places. Also, the position of the pairs relative to one another can change and the puzzle would still look solved. 
 
 All the permutations of 4 possible pairs: 4!
 
@@ -58,17 +58,17 @@ In order to validate my theory and to also calculate the **God's Number** (maxim
 ```
 python sim.py
 Total combinations: 10080, Solutions: 96, Max path to solution: 10
-Number of pathes of length 0: 96
-Number of pathes of length 1: 192
-Number of pathes of length 2: 288
-Number of pathes of length 3: 480
-Number of pathes of length 4: 768
-Number of pathes of length 5: 1824
-Number of pathes of length 6: 2688
-Number of pathes of length 7: 3264
-Number of pathes of length 8: 192
-Number of pathes of length 9: 192
-Number of pathes of length 10: 96
+Number of paths of length 0: 96
+Number of paths of length 1: 192
+Number of paths of length 2: 288
+Number of paths of length 3: 480
+Number of paths of length 4: 768
+Number of paths of length 5: 1824
+Number of paths of length 6: 2688
+Number of paths of length 7: 3264
+Number of paths of length 8: 192
+Number of paths of length 9: 192
+Number of paths of length 10: 96
 ```
 I am sure it can be done much more effecicently, but that was a quick and dirty exercise and proves my assumptions (the numbers match!). It also reveals the God's Number for Auzzle, the number is 10! 10 moves is all it takes to get from the worst position to one of the 96 solved states.
 

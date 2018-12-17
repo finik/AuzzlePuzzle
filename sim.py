@@ -91,18 +91,18 @@ def scan(maxDepth):
 
 	# iterate over all the permutations and find the maximum path
 	maxpath = 0
-	pathes = {}
+	paths = {}
 	for i in combinations:
 		maxpath = max(maxpath, combinations[i])
 		pathes[combinations[i]] = pathes.get(combinations[i], 0) + 1
 
-	return maxpath, pathes
+	return maxpath, paths
 
-maxpath, pathes = scan(15)
+maxpath, paths = scan(15)
 
 print "Total combinations: %i, Solutions: %i, Max path to solution: %i" % (len(combinations), pathes[0], maxpath)
-for i in pathes:
-	print "Number of pathes of length %i: %i" % (i, pathes[i])
+for i in paths:
+	print "Number of paths of length %i: %i" % (i, paths[i])
 
 
 
