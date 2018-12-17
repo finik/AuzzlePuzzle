@@ -5,6 +5,8 @@ Below is my notes and a quick simulation of the rotating puzzle called Auzzle by
 
 [https://www.facebook.com/AuzzlePuzzle/](https://www.facebook.com/AuzzlePuzzle/)
 
+[https://www.youtube.com/watch?v=c7eOGJ46Mu4](https://www.youtube.com/watch?v=c7eOGJ46Mu4)
+
 Disclaimer: I do not even own one. All the work below is my attempt to analyze it after having the pleasure to see and play with a prototype for a few minutes.
 
 ## Theory
