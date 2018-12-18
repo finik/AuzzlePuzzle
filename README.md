@@ -22,7 +22,7 @@ If we keep thinking in binary, in order for a pair of pieces to be each others m
 
 **A xor reversed(B) == 7**
 
-`It is easy to overlook the "reversed" part, but it is important! We encode every piece in the same way, 1 always means '+' pole is oriented towards the center. Pieces will change their orientation, sometimes they will face up and sometimes down, but when faced each other, we can't operate directly on their encodings, we must reverse (mirror) of one of them (i.e piece 001 (1) will atract magnets in the 110 (6) formation, however the actual encoding of that opposing piece is 011 (3))
+`It is easy to overlook the "reversed" part, but it is important! We encode every piece in the same way, 1 always means '+' pole is oriented towards the center. Pieces will change their orientation, sometimes they will face up and sometimes down, but when faced each other, we can't operate directly on their encodings, we must remember the top one is upside down (i.e piece 001 (1) will atract magnets in the 110 (6) formation, however the actual encoding of that opposing top piece is 011 (3))
 `
 
 In other words, in order to solve the puzzle, piece #0 must be placed against piece #7, #4 against #6, #1 against #3 and #2 against #5.
