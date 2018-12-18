@@ -103,7 +103,7 @@ That leaves with 8 encodings that do not have any of the issues above, each one 
 
 **All magnets pushed outside:** (#1, #8), (#2, #4), (#7, #14), (#11, #13)
 
-It would be logical to assume the total amount of combination will not change (the amount of pieces did not change, it is still 8). The amount of solution states should probably double to 192 (96 inside and 96 outside), and the God's number should probably decrease by 1 as well (worst case should probably be only 9 moves away from one of the solved states). To test it, I've duplicated the simulation and modified it to work with the 4bit encodings above, the code can be found (sim-4bit.py)[sim-4bits.py]
+It would be logical to assume the total amount of combination will not change (the amount of pieces did not change, it is still 8). The amount of solution states should probably double to 192 (96 inside and 96 outside), and the God's number should probably decrease by 1 as well (worst case should probably be only 9 moves away from one of the solved states). To test it, I've duplicated the simulation and modified it to work with the 4bit encodings above, the code can be found [sim-4bit.py](sim-4bits.py)
 
 Results:
 ```
