@@ -58,7 +58,7 @@ And, again, divide by 8 to account for rotation of the whole construction and av
 
 ## Practice
 
-In order to validate my theory and also calculate the **God's Number** (maximum number of moves God has to perform to get to a solved state), I've written a simple simulator that tries to scan all possible states by doing it in reverse, starting with a solved state and traversing the tree of all the possible states. The code can be found in [sym.py](sym.py). It starts at the at the initial solved state shown in the picture above, then performs a BFS'ish scan of the whole space by performing all possible operations. For every state, to avoid double counting rotations (remember the division by 8), it rotates the whole puzzle to a **canonical** state where piece #0 is inside the lower left quadrant. 
+In order to validate my theory and also calculate the **God's Number** (maximum number of moves God has to perform to get to a solved state), I've written a simple simulator that tries to scan all possible states by doing it in reverse, starting with a solved state and traversing the tree of all the possible states. The code can be found in [sim.py](sim.py). It starts at the at the initial solved state shown in the picture above, then performs a BFS'ish scan of the whole space by performing all possible operations. For every state, to avoid double counting rotations (remember the division by 8), it rotates the whole puzzle to a **canonical** state where piece #0 is inside the lower left quadrant. 
 
 ```
 python sim.py
@@ -103,3 +103,22 @@ That leaves with 8 encodings that do not have any of the issues above, each one 
 
 **All magnets pushed outside:** (#1, #8), (#2, #4), (#7, #14), (#11, #13)
 
+It would be logical to assume the total amount of combination will not change (the amount of pieces did not change, it is still 8). The amount of solution states should probably double to 192 (96 inside and 96 outside), and the God's number should probably decrease by 1 as well (worst case should probably be only 9 moves away from one of the solved states). To test it, I've duplicated the simulation and modified it to work with the 4bit encodings above, the code can be found (sim-4bit.py)[sim-4bits.py]
+
+Results:
+```
+python sim-4bits.py
+Total combinations: 10080, Solutions: 192, Max path to solution: 9
+Number of paths of length 0: 192
+Number of paths of length 1: 368
+Number of paths of length 2: 512
+Number of paths of length 3: 800
+Number of paths of length 4: 1184
+Number of paths of length 5: 2496
+Number of paths of length 6: 2816
+Number of paths of length 7: 1616
+Number of paths of length 8: 48
+Number of paths of length 9: 48
+```
+
+Yeap, we guessed right!
